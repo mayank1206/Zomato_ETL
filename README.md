@@ -1,24 +1,13 @@
+# Introduction:
+ETL pipeline to extracting data from JSON files, modified it and loading it into a Hive data warehouse. The json file contains daily online order data from zomato site.
+
 # Setup: 
-Need to comment bellow variables and restart the ubantu
-unset PYSPARK_DRIVER_PYTHON
-unset PYSPARK_DRIVER_PYTHON_OPTS
+1. Change the property file according to the need
+2. Run setup_local_dir.sh to setup the local directory structure
+3. Copy the json file from source to zomato_raw_files
+4. Run the wrapper.sh
 
-start hadoop and yarn services make sure hdfs has this /user/talentum structure
-start hive metastore and hive server
-
-download the zip
-unzip the zip
-
-do the changes in the property file
-I have added onlt handful of indian cusines It can be change according to the requirement
-
-run setup_local_dir.sh to setup the local directory structure
-copy the json file from source to zomato_raw_files
-
-go to the location zomato_etl/script
-
-you can run wrapper.sh in many ways
-
+you can run wrapper.sh in below ways
 wrapper.sh => which will run all the modules
 wrapper.sh 1 => which will run first module
 wrapper.sh 2 => which will run second module
