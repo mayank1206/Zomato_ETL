@@ -1,0 +1,26 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS ${hivevar:dbName}.zomato(
+  restaurant_id INT,
+  restaurant_name STRING,
+  country_code INT,
+  city STRING,
+  address STRING,
+  locality STRING,
+  locality_verbose STRING,
+  longitude FLOAT,
+  latitude FLOAT,
+  cuisines STRING,
+  average_cost_for_two FLOAT,
+  currency STRING,
+  has_table_booking INT,
+  has_online_delivery INT,
+  is_delivering_now INT,
+  switch_to_order_menu INT,
+  price_range INT,
+  aggregate_rating FLOAT,
+  rating_text STRING,
+  votes INT
+) 
+PARTITIONED BY (file_date STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' 
+LOCATION '${hivevar:tableLocation}/zomato_ext/zomato'
+tblproperties ("skip.header.line.count"="1");

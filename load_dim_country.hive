@@ -1,0 +1,2 @@
+LOAD DATA LOCAL INPATH '${hivevar:filePath}' 
+INTO TABLE ${hivevar:dbName}.dim_country;

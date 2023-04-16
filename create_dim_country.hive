@@ -1,0 +1,7 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS ${hivevar:dbName}.dim_country(
+  country_code INT,
+  country STRING
+) 
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+LOCATION '${hivevar:tableLocation}/zomato_ext/dim_country'
+tblproperties ("skip.header.line.count"="1");

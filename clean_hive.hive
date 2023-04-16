@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS ${hivevar:dbName}.zomato_summary_log;
+DROP TABLE IF EXISTS ${hivevar:dbName}.zomato;
+DROP TABLE IF EXISTS ${hivevar:dbName}.zomato_summary;
+DROP TABLE IF EXISTS ${hivevar:dbName}.dim_country;

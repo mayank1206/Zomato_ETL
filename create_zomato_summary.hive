@@ -1,0 +1,30 @@
+CREATE TABLE IF NOT EXISTS ${hivevar:dbName}.zomato_summary(
+  restaurant_id INT,
+  restaurant_name STRING,
+  country_code INT,
+  city STRING,
+  address STRING,
+  locality STRING,
+  locality_verbose STRING,
+  longitude FLOAT,
+  latitude FLOAT,
+  cuisines STRING,
+  average_cost_for_two FLOAT,
+  currency STRING,
+  has_table_booking INT,
+  has_online_delivery INT,
+  is_delivering_now INT,
+  switch_to_order_menu INT,
+  price_range INT,
+  aggregate_rating FLOAT,
+  rating_text STRING,
+  votes INT,
+  m_rating_colour STRING,
+  m_cuisines STRING,
+  create_datetime STRING,
+  user_id INT
+)
+PARTITIONED BY (p_filedate STRING, p_country_name STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
+

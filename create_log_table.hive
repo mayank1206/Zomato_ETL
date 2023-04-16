@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS ${hivevar:dbName}.zomato_summary_log(
+  job_id BIGINT,
+  job_step STRING,
+  spark_submit_command STRING,
+  job_start_time TIMESTAMP,
+  job_end_time TIMESTAMP,
+  job_status STRING
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+LOCATION '${hivevar:tableLocation}/log';
