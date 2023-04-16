@@ -1,4 +1,4 @@
-Setup: 
+# Setup: 
 Need to comment bellow variables and restart the ubantu
 unset PYSPARK_DRIVER_PYTHON
 unset PYSPARK_DRIVER_PYTHON_OPTS
